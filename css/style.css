@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ccc;
+}
+body .tudo {
+  position: relative;
+}
+body .tudo .menu {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #467859;
+  height: 10vh;
+}
+body .tudo .menu header {
+  color: #fff;
+}
+body .tudo .menu nav .menu__list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+body .tudo .menu nav .menu__list .menu__list__item {
+  list-style: none;
+  display: inline-block;
+}
+body .tudo .menu nav .menu__list .menu__list__item a {
+  text-decoration: none;
+  color: #fff;
+}
+body .title {
+  padding-top: 10vh;
+}
+body .title .title__div {
+  background: #fbfdff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+body .title .title__div .title__profile {
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  border: 5px solid #467859;
+}
+body .title .title__div .title__container .title__bio {
+  font-size: 30px;
+}
+body .title .title__div .title__container .title__bio span {
+  color: #467859;
+}
+body .title .title__div .title__container .title__network {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  margin-top: 5%;
+}
+body .title .title__div .title__container .title__network .title__network__item {
+  list-style: none;
+  width: 110px;
+  height: 30px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .title .title__div .title__container .title__network .title__network__item a {
+  text-decoration: none;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(1) {
+  background: #474545;
+  border-radius: 20px;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(1) a {
+  color: #fff;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(2) {
+  background: #474545;
+  border-radius: 20px;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(2) a {
+  color: #fff;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(3) {
+  background: #474545;
+  border-radius: 20px;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(3) a {
+  color: #fff;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(4) {
+  background: #474545;
+  border-radius: 20px;
+}
+body .title .title__div .title__container .title__network .title__network__item:nth-child(4) a {
+  color: #fff;
+}
+body .about {
+  position: absolute;
+  background: #fbfdff;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .about .about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+  background-color: #dfe7e7;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+body .about .about__container .about__title {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+body .about .about__container .about__paragraph {
+  font-size: 18px;
+}
+body .skills {
+  margin-top: 100px;
+  padding-top: 50vh;
+  display: flex;
+  flex-direction: column;
+  background: red;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 850px;
+}
+body .skills .skills__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+body .skills .skills__line {
+  display: flex;
+  height: 80%;
+  background: blue;
+  width: 75%;
+  gap: 5%;
+  justify-content: center;
+}
+body .skills .skills__line .skills__box {
+  height: 150px;
+  width: 150px;
+  background: green;
+  border-radius: 25px;
+}/*# sourceMappingURL=style.css.map */

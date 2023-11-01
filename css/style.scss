@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     background: #fbfdff;
     .tudo{
@@ -150,23 +154,22 @@ body{
         display: flex;
         flex-direction: column;
         width: 100%;
-        justify-content: center;
         align-items: center;
-        height: 850px;
-        margin-bottom: 150px;
+        height: 100vh;
+        margin-bottom: 250px;
+
         .skills__title{
             text-align: center;
             font-size: 40px;
             margin-bottom: 50px;
-            
         }
         .skills__line{
         display: flex;
         height: 80%;
         width: 75%;
         gap: 5%;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
             .skills__box{
                 height: 150px;
                 width: 150px;
@@ -177,6 +180,7 @@ body{
                 border-top-right-radius: 10%;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: 50px;
                 ul{
                     display: flex;
                     width: 100%;
@@ -260,78 +264,83 @@ body{
             }
         }
     }
-    .experience{
+   
+    .proyectos {
+        .proyectos__title{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
         margin-top: 100px;
-        width: 75%;
-        height: 200vh;
+        width: 50%;
+        height: 100vh;
         justify-content: center;
         align-items: center;
-        margin-left: 12.5%;
-
-        h2{
-            text-align: center;
-            font-size: 40px;margin-bottom: 50px;
-        }
-        .experience__box{
+        margin-left: 25%;
+      
+        .imagen-contenedor {
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          margin-bottom: 50px;
+      
+          img {
+            width: 100%;
+            display: block;
+          }
+      
+          .imagen-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5); // Color de fondo negro con opacidad 50%
+            color: #fff;
+            padding: 20px;
+            transform: translateY(100%); // Inicialmente ocultamos el contenido por debajo
+            transition: transform 0.8s ease; // Efecto de transición suave
+            align-items: center;
             display: flex;
             flex-direction: column;
-            width: 80%;
-            height: 45%;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            .experience__img{
-                position: relative;
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-                border-radius: 20px;
-                border: 5px solid #474545;
-                
+            justify-content: flex-end; // Centra el contenido verticalmente
+      
+            h2, p {
+              margin: 0; // Elimina márgenes por defecto para un centrado preciso
             }
-            .experience__info{
-                margin-bottom: 100px;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                .experience__description{
-                    gap: 25px;
-                    display: flex;
-                    .experience__repo{
-                        .experiencia__botao--repo{
-                            background-color: #467859;
-                            padding: .3rem .3rem;
-                            color: white;
-                            border-radius: #fff;
-                            border: none;
-                            border-radius: 5px;
-                        }
-                    }
-                    .experience__demo{
-                        .experience__botao--demo{
-                            background-color: #467859;
-                            padding: .3rem .3rem;
-                            color: white;
-                            border-radius: #fff;
-                            border: none;
-                            border-radius: 5px;
-                        }
-                    }
+      
+            .iconos {
+              display: flex;
+              justify-content: center; // Centrar horizontalmente
+              gap: 10px; // Espacio entre íconos
+              width: 70px;
+      
+              a {
+                transition: transform 0.3s ease;
+                &:hover {
+                  transform: scale(1.1); // Efecto de "zoom" al pasar el ratón
+                  }
                 }
-            } 
+              }
+              
+            }
+          }
+      
+          &:hover .imagen-info {
+            transform: translateY(0); // Al pasar el ratón, mostramos el contenido
+          }
         }
-        
-    }
+      }
+      
     .formcontato{
         height: 100vh;
         display: flex;
+        margin-top: 200px;
 
         .formcontato__contacto{
             height: 80%;
             width: 50%;
             margin: 0 auto;
+            margin-top: 120px;
             .formcontato__text{
                 height: 100%;
                 display: flex;
@@ -406,5 +415,132 @@ body{
         
 
     }
-}
 
+    @media (max-width:428px){
+        .tudo{
+            .menu{
+                .menu__list{
+                    .menu__list__item{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .title{
+            .title__div{
+                margin-bottom: 200px;
+                .title__container{
+                    .title__bio{
+                        font-size: 20px;
+                        align-items: center;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                    .title__network{
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 75%;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 12.5%;
+                        .title__network__item{
+                            width: 100%;
+                            height: 100px;
+                            margin-bottom: 10px;
+
+                            a{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about{
+            .about__container{
+                height: 100vh;
+                width: 100vw;
+                .about__title{
+                    font-size: 20px;
+                }
+                .about__paragraph{
+                    font-size: 10px;
+                }
+            }
+        }
+        .skills{
+            .skills__title{
+                font-size: 20px;
+            }
+            .skills__line{
+                height: 200vh;
+                display: flex;
+                flex-direction: column;
+                .skills__box{
+                    height: 100px;
+                    width: 100px;
+                    .skills__img{
+                        img{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .academic{
+            .academic__courses{
+                .academic__courses__box{
+                    .academic__courses__list{
+                        .academic__courses__item__title{
+                            p{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .proyectos{
+            .proyectos__title{
+                font-size: 20px;
+            }
+            .imagen-contenedor{
+                height: 50vh;
+            }
+        }
+        .formcontato{
+            .formcontato__contacto{
+                width: 75%;
+                .formcontato__text{
+                    
+                    .caja{
+                        height: 10%;
+                    }
+                    .formcontato__title{
+                        font-size: 20px;
+                    }
+                    .formcontato_form{
+                        .formcontato__input{
+                            font-size: 10px;
+                        }
+                        .formcontato__textarea{
+                            font-size: 10px;
+                        }
+                        .formcontato__botao{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer{
+            height: 75px;
+            .footer__rodape{
+                font-size: 10px;
+            }
+        }
+    }
